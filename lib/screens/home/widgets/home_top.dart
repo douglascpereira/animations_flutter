@@ -18,9 +18,11 @@ class HomeTop extends StatelessWidget {
           image: DecorationImage(
               image: AssetImage("images/background.jpg"), fit: BoxFit.cover)),
       child: SafeArea(
+        bottom: false,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
+            SizedBox(height: 20,),
             Text(
               "Bem vindo, Douglas!",
               style: TextStyle(
@@ -28,6 +30,7 @@ class HomeTop extends StatelessWidget {
                   fontWeight: FontWeight.w300,
                   color: Colors.white),
             ),
+            SizedBox(height: 20,),
             Container(
               alignment: Alignment.topRight,
               width: containerGrow.value * 120,
@@ -54,7 +57,8 @@ class HomeTop extends StatelessWidget {
                     color: Color.fromRGBO(80, 210, 194, 1.0)),
               ),
             ),
-            CategoryView()
+            SizedBox(height: 30,),
+            CategoryView(),
           ],
         ),
       ),
